@@ -14,11 +14,14 @@ function dibujarMapa(lat, lon) {
 		map: map, 
 		title:"Mi posición"
 	});
+	alert("Alerta1");
 }
 
 $(function(){
 	document.addEventListener("deviceready", function(){
+		alert("Alerta2");
 		navigator.geolocation.getCurrentPosition(function(position){
+			alert("Alerta2");
 			dibujarMapa(position.coords.latitude, position.coords.longitude);
 		}, function(error) {
 		alert('code: '    + error.code    + '\n' +
