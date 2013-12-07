@@ -19,7 +19,7 @@ function dibujarMapa(lat, lon) {
 $(function(){
 	document.addEventListener("deviceready", function(){
 		navigator.geolocation.getCurrentPosition(function(position){
-			dibujarMapa(position.coords.latitude, position.cords.longitude);
+			dibujarMapa(position.coords.latitude, position.coords.longitude);
 		}, function(error) {
 		alert('code: '    + error.code    + '\n' +
 		  'message: ' + error.message + '\n');
